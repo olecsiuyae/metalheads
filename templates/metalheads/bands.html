@@ -10,7 +10,7 @@
             {% if bands %}
             <ul>
                 {% for band in bands %}
-                <li><a href="{{ band.url }}">{{ band.title }}</a></li>
+                <li><a href="/bands/{{ band.id }}">{{ band.name }}</a></li>
                 {% endfor %}
             </ul>
             {% else %}
