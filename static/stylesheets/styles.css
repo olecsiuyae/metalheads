@@ -1,4 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");
+@import url("/static/fonts/lato/lato.css");
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6800,4 +6801,11 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading {
   background-color: #464545;
+}
+html,
+body {
+  height: 100%;
+}
+.content {
+  margin-top: 80px;
 }
