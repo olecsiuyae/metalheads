@@ -1,37 +1,36 @@
 from django.shortcuts import render
 
-from translate.models import Category, Page
+from translate.models import Category, Band, Song, Page
 
 
 def main(request):
     return render(request, "metalheads/main.html")
+
 
 def categories(request):
     category_list = Category.objects.order_by('-likes')[:5]
     context_dict = {'categories': category_list}
     return render(request, 'metalheads/categories.html', context_dict)
 
-def bands(request ,category_name_slug):
 
+def category(request, category_id):
     context_dict = {}
 
     try:
 
-        category = Category.objects.get(slug=category_name_slug)
+        category = Category.objects.get(pk=category_id)
         context_dict['category_name'] = category.name
 
+        bands = Band.objects.filter(category=category)
 
-        pages = Page.objects.filter(category=category)
-
-
-        context_dict['pages'] = pages
+        context_dict['bands'] = bands
 
         context_dict['category'] = category
     except Category.DoesNotExist:
 
         pass
-    return render(request, "metalheads/categories.html", context_dict)
 
+    return render(request, 'metalheads/bands.html', context_dict)
 
 
 def translates(request):
