@@ -8,4 +8,5 @@ urlpatterns = patterns('',
                        url(r'^categories/(?P<category_id>\d+)/$', views.category, name='category'),
                        url(r'^categories/$', views.categories, name='categories'),
                        url(r'^band/(?P<band_id>\d+)/$', views.band, name='band'),
-                       url(r'^translates/(?P<translates_id>\d+)/$', views.translates, name='translates'),)
+                       url(r'^translate/(?P<translates_id>\d+)/$', views.translate, name='translate'),)
+

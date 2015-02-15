@@ -51,7 +51,7 @@ def band(request, band_id):
 
     return render(request, 'metalheads/songs.html', context_dict)
 
-def translates(request, translates_id):
+def translate(request, translates_id):
     context_dict = {}
     try:
         song = Song.objects.get(pk=translates_id)
