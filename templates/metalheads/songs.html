@@ -5,12 +5,12 @@
     <title></title>
 </head>
 <body>
-        <h1>{{ category_name }}</h1>
-        {% if category %}
+        <h1>{{ band_name }}</h1>
+        {% if band %}
             {% if songs %}
             <ul>
                 {% for song in songs %}
-                <li><a href="/songs/{{ song.id }}">{{ song.name }}</a></li>
+                <li><a href="/translate/{{ song.id }}">{{ song.name }}</a></li>
                 {% endfor %}
             </ul>
             {% else %}

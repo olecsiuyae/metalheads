@@ -40,7 +40,7 @@ def band(request, band_id):
         band = Band.objects.get(pk=band_id)
         context_dict['band_name'] = band.name
 
-        songs = Song.objects.filter(category=band)
+        songs = Song.objects.filter(band=band)
 
         context_dict['songs'] = songs
 
