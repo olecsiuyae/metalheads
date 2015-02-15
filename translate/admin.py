@@ -11,8 +11,8 @@ class BandAdmin(admin.ModelAdmin):
 
 
 class SongAdmin(admin.ModelAdmin):
-    fields = ('text_ukr', 'text_org', 'name', 'likes', 'views')
-    list_display = ('text_ukr', 'text_org', 'name', 'likes', 'views')
+    fields = ('text_ukr', 'text_org', 'name', 'likes', 'views', 'band')
+    list_display = ('text_ukr', 'text_org', 'name', 'likes', 'views', 'band')
 
 
 admin.site.register(Category, CategoryAdmin)
