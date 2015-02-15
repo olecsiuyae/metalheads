@@ -1,17 +1,22 @@
 from django.contrib import admin
-from translate.models import Category, Band, Song, Page
+from translate.models import Category, Band, Song
 
 
 class CategoryAdmin(admin.ModelAdmin):
     pass
+
+
 class BandAdmin(admin.ModelAdmin):
     pass
+
+
 class SongAdmin(admin.ModelAdmin):
-    pass
+    fields = ('text_ukr', 'text_org', 'name', 'likes', 'views')
+    list_display = ('text_ukr', 'text_org', 'name', 'likes', 'views')
 
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Band, BandAdmin)
 admin.site.register(Song, SongAdmin)
-admin.site.register(Page)
+
 

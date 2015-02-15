@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from translate.models import Category, Band, Song, Page
+from translate.models import Category, Band, Song
 
 
 def main(request):
@@ -8,7 +8,7 @@ def main(request):
 
 
 def categories(request):
-    category_list = Category.objects.order_by('-likes')[:5]
+    category_list = Category.objects.order_by('name')
     context_dict = {'categories': category_list}
     return render(request, 'metalheads/categories.html', context_dict)
 
@@ -32,14 +32,44 @@ def category(request, category_id):
 
     return render(request, 'metalheads/bands.html', context_dict)
 
+def band(request, band_id):
+    context_dict = {}
 
-def translates(request):
-    return render(request, "metalheads/translates.html")
+    try:
+
+        band = Band.objects.get(pk=band_id)
+        context_dict['band_name'] = band.name
+
+        songs = Song.objects.filter(category=band)
+
+        context_dict['songs'] = songs
+
+        context_dict['band'] = band
+    except Category.DoesNotExist:
+
+        pass
+
+    return render(request, 'metalheads/songs.html', context_dict)
+
+def translates(request, translates_id):
+    context_dict = {}
+    try:
+        song = Song.objects.get(pk=translates_id)
+        context_dict['text_ukr'] = song.text_ukr
+        context_dict['text_org'] = song.text_org
+        context_dict['song_name'] = song.name
+    except Category.DoesNotExist:
+
+        pass
+
+    return render(request, "metalheads/translates.html", context_dict)
 
 
 def contacts(request):
+
     return render(request, "metalheads/contacts.html")
 
 
 def search(request):
+
     return render(request, "metalheads/search.html")
