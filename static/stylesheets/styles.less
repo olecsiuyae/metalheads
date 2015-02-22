@@ -4,19 +4,7 @@
 
 @import "base";
 @import "header";
-
-#page-wrap {
-    min-height: 100%;
-    width: inherit;
-    top: 0;
-    margin-top: 0;
-    margin-bottom: -20px;
-}
-
-.page-wrap:after {
-    content: "";
-    display: block;
-}
+@import "footer";
 
 .hello-words {
     padding-top: 120px;
@@ -88,20 +76,4 @@
             margin: 5px 5px;
         }
     }
-}
-
-.footer {
-    position: relative;
-    color: #f5f5f5;
-    bottom: 0;
-    width: 100%;
-    background: black;
-    .copyright {
-        font-size: 12px;
-        text-align: center;
-    }
-}
-
-.footer, .page-wrap:after {
-    height: 20px;
 }
