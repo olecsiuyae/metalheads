@@ -15,7 +15,7 @@ def main(request):
 def categories(request):
     category_list = Category.objects.order_by('name')
     context_dict = {'categories': category_list}
-    return render(request, 'metalheads/categories.html', context_dict)
+    return render(request, 'metalheads/catalogue.html', context_dict)
 
 
 def category(request, category_id):

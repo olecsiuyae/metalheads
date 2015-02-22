@@ -45,10 +45,9 @@
     </div>
     <div class="content-container container">
         <div class="content-row row">
-            <div class="col-md-3">xgnzgnzg</div>
-            <div class="col-md-3">srthatharj</div>
-            <div class="col-md-3">aetjaetjatj</div>
-            <div class="col-md-3">aetharthat5h</div>
+            {% for category in categories %}
+            <div class="col-md-3">{{ category.name }}</div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
