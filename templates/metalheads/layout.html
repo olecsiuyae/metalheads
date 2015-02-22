@@ -14,7 +14,7 @@
     <![endif]-->
 </head>
 
-<body {% block body %}{% endblock %}>
+<body class="{% block body-classes %}{% endblock %}">
     <header class="header">
         <div class="menu">
             <div class="list">
@@ -31,7 +31,7 @@
                     <span class="fa fa-bars"></span>
                 </div>
                 <div class="brand">
-                    <a href="#">Metalheads</a>
+                    <a href="{% url 'main' %}">Metalheads</a>
                 </div>
                 <div class="box">
                     <div class="search-container">

@@ -6926,6 +6926,15 @@ body {
   outline: none;
   background: #ffffff;
 }
+.hello-words {
+  padding-top: 120px;
+  padding-left: 50px;
+}
+.hello-words h1 {
+  margin-top: 0;
+  font-size: 75px;
+  line-height: 1;
+}
 .footer {
   position: relative;
   color: #f5f5f5;
@@ -6940,14 +6949,6 @@ body {
 .footer,
 .page-wrap:after {
   height: 20px;
-}
-.hello-words {
-  padding-top: 120px;
-  padding-left: 50px;
-}
-.hello-words div {
-  font-size: 75px;
-  line-height: 1;
 }
 .name-container {
   position: relative;
