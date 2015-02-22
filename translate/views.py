@@ -9,7 +9,7 @@ from translate.form import UserForm, UserAddSongForm
 
 
 def main(request):
-    return render(request, "metalheads/main.html")
+    return render(request, "metalheads/home.html")
 
 
 def categories(request):
