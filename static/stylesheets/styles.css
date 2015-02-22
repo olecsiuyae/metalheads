@@ -6801,6 +6801,25 @@ a.list-group-item-danger.active:focus {
 .panel-default > .panel-heading {
   background-color: #464545;
 }
+html,
+body {
+  height: 100%;
+}
+body {
+  top: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.body-home {
+  background: url("/static/images/back.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+.body-cataloque {
+  background: url("/static/images/back-c.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
 .header {
   width: 100%;
   top: -50px;
@@ -6885,25 +6904,6 @@ a.list-group-item-danger.active:focus {
 .header .head-line {
   width: 100%;
   margin-top: 10px;
-}
-html,
-body {
-  height: 100%;
-}
-body {
-  top: 0;
-  margin: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.body-home {
-  background: url("/static/images/back.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-.body-cataloque {
-  background: url("/static/images/back-c.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
 .fa-bars,
 .fa-search {
