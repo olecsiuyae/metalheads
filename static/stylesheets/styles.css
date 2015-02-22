@@ -6812,14 +6812,6 @@ body {
   width: 100%;
   height: 100%;
 }
-.body-home {
-  background: url("/static/images/back.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-.body-cataloque {
-  background: url("/static/images/back-c.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
 #page-wrap {
   min-height: 100%;
   width: inherit;
@@ -6926,6 +6918,10 @@ body {
   outline: none;
   background: #ffffff;
 }
+.body-home {
+  background: url("/static/images/back.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
 .hello-words {
   padding-top: 120px;
   padding-left: 50px;
@@ -6935,20 +6931,9 @@ body {
   font-size: 75px;
   line-height: 1;
 }
-.footer {
-  position: relative;
-  color: #f5f5f5;
-  bottom: 0;
-  width: 100%;
-  background: black;
-}
-.footer .copyright {
-  font-size: 12px;
-  text-align: center;
-}
-.footer,
-.page-wrap:after {
-  height: 20px;
+.body-catalogue {
+  background: url("/static/images/back-c.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 .name-container {
   position: relative;
@@ -7004,4 +6989,19 @@ body {
   background: pink;
   text-align: center;
   margin: 5px 5px;
+}
+.footer {
+  position: relative;
+  color: #f5f5f5;
+  bottom: 0;
+  width: 100%;
+  background: black;
+}
+.footer .copyright {
+  font-size: 12px;
+  text-align: center;
+}
+.footer,
+.page-wrap:after {
+  height: 20px;
 }
