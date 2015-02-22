@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Metalheads</title>
+    </head>
+
+    <body>
+        <h1>Додати пісню</h1>
+
+
+        <form id="form" method="post" action="/addsong/"
+                enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+
+            {{ form.as_p }}
+
+
+            <!-- Provide a button to click to submit the form. -->
+            <input type="submit" name="submit" value="Додати" />
+        </form>
+
+    </body>
+</html>
